@@ -15,9 +15,7 @@ if [ ! -f ~/.intialised ]; then
     echo "First time running node..." 
     
     echo "Creating new account. See: ${PWD}/account.txt"
-    geth --datadir ./chain --password ./account-password.txt account new > ./account.txt
-    
-    touch ~/.initialised
+    geth --datadir ./chain --password ./account-password.txt account new > ./account.txt && touch ~/.initialised
 fi
 
 # Load any node connection details, filtering out the details for this node.
