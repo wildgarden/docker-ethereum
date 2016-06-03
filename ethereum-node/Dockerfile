@@ -9,5 +9,4 @@ COPY ./run-node.sh .
 
 RUN chmod a+x ./run-node.sh
 
-CMD ./run-node.sh
-
+CMD ["/bin/sh", "./run-node.sh"]
